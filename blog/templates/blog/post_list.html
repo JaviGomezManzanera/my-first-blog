@@ -4,7 +4,17 @@
     </head>
     <body>
         <div>
-            <h1><a href="/">MicroBlading</a></h1>
+            <div>
+                <h1><a href="/">Microblading</a></h1>
+            </div>
+            
+            {% for post in posts %}
+                <div>
+                    <p> publicado: {{ post.published_date }}</p>
+                    <h2><a href="">{{ post.title }}</a></h2>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            {% endfor %}
         </div>
 
         <div>
